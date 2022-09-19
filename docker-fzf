@@ -614,3 +614,16 @@ fzf-docker-debug-info() {
     echo -e "$v"
   done;
 }
+
+
+# Attatch to a container docker exec -it $id
+function da() {
+  __docker_pre_test \
+    && docker ps --format '{{.Names}} {{.ID}}' \
+      | fzf -m  \
+      | while read -r name id; do
+          selected_id=$id
+        done
+        echo $selected_id
+        docker exec -it $selected_id ${2:-bash}
+}
