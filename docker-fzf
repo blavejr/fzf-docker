@@ -627,3 +627,5 @@ function da() {
         echo $selected_id
         docker exec -it $selected_id ${2:-bash}
 }
+
+source ./gcloud-fzf

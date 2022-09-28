@@ -1,0 +1,13 @@
+#!/bin/bash
+# Attatch to a container docker exec -it $id
+function gdeploy() {
+    gcloud projects list --format=json \
+      | jq -r '.[] | [.name,.projectId]|join(" ")' \
+      | fzf -m \
+      | while read -r name projectId; do
+          projectID=$projectId
+        done
+        echo $projectID
+        gcloud run deploy --project=$projectID
+        # docker exec -it $projectName
+}

@@ -6,7 +6,8 @@ Feel free to create a PR with improvements - but please keep this documentation 
 # Requirements
 
 1. `docker` / `docker-compose` must be accessible to non-root users
-1. `fzf`  (https://github.com/junegunn/fzf#installation)
+2. `fzf`  (https://github.com/junegunn/fzf#installation)
+3. `jq` (https://webinstall.dev/jq/)
 
 # Installation instructions
 
